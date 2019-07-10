@@ -3,7 +3,7 @@ import Header from './Header';
 import Home from './Home';
 import Seating from './Seating';
 import { Switch, Route } from 'react-router-dom';
-import { v4 } from 'uuid';
+// import { v4 } from 'uuid';
 
 
 class App extends React.Component {
@@ -56,7 +56,6 @@ class App extends React.Component {
         }
       ]
     };
-    console.log(this.state);
     
     this.handleAddingNewTicket = this.handleAddingNewTicket.bind(this);
     this.handleUpVote = this.handleUpVote.bind(this);
@@ -71,16 +70,13 @@ class App extends React.Component {
   }
 
   handleUpVote(ticket) {
-    console.log(ticket);
     ticket.votes++;
     this.setState(this.state.masterTicketList[ticket.id]);
-    console.log(ticket.votes)
   }
 
   handleDownVote(ticket){
     ticket.votes--;
     this.setState(this.state.masterTicketList[ticket.id]);
-    console.log(ticket.votes)
   }
   
   render(){

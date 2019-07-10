@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
 export default function Seating(props) {
 
-  let sortedTickeList = props.ticketList.sort(function(a, b){return b.votes - a.votes});
+  let sortedTickeList = props.ticketList.sort(function(a, b){return b.votes - a.votes;});
 
   return (
     <div>
